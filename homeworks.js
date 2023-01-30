@@ -103,5 +103,4 @@ console.log(vowelSummer("HELLO"));
 
 let ar1 = ["my", "name", "is", "john"];
 let newArrays = arrayConverter(ar1);
-console.log(newArrays); 
- */
+console.log(newArrays);  */
