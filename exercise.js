@@ -8,3 +8,17 @@
 }
 
 cmToM(400); */
+
+/* function sumCalculator(x) {
+    let sum = 0;
+    
+    for (let i = 0; i < x.length; i++) {
+        sum += x[i];
+    }
+    let sashualo = sum / x.length;
+    
+    return sashualo;
+}
+
+console.log(sumCalculator([4, 11, 42, 72, 25, 7, 8]));  */
+
