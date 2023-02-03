@@ -19,8 +19,6 @@ logger(x);
 
 
 
-
-
 /*  2. Create a program that takes an array of numbers and returns the sum of all 
 the numbers in the array. Use a for loop to iterate over the array and add each number to a total variable. */
 
