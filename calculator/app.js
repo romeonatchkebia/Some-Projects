@@ -3,6 +3,7 @@ const screen = document.getElementById("screen");
 const allClear = document.getElementById("AC");
 const clear = document.getElementById("C");
 const percent = document.getElementById("percent");
+const slash = document.getElementById("slash");
 const seven = document.getElementById("seven");
 const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
@@ -21,15 +22,14 @@ const equal = document.getElementById("equal");
 
 
 
+
+
 allClear.addEventListener("click", () => {
     screen.value = "";
 });
 clear.addEventListener("click", () => {
     screen.value = screen.value.slice(0,-1);
 }); 
-allClear.addEventListener("click", () => {
-    screen.value += "";
-});
 percent.addEventListener("click", () => {
     screen.value += "%";
 });
@@ -43,7 +43,7 @@ nine.addEventListener("click", () => {
     screen.value += "9";
 });
 mult.addEventListener("click", () => {
-    screen.value += "x";
+    screen.value += "*";
 });
 four.addEventListener("click", () => {
     screen.value += "4";
@@ -68,6 +68,7 @@ three.addEventListener("click", () => {
 });
 plus.addEventListener("click", () => {
     screen.value += "+";
+
 });
 zero.addEventListener("click", () => {
     screen.value += "0";
@@ -75,8 +76,11 @@ zero.addEventListener("click", () => {
 dote.addEventListener("click", () => {
     screen.value += ".";
 });
+slash.addEventListener("click", () => {
+    screen.value += "/";
+});
 equal.addEventListener("click", () => {
-    screen.value += "=";
+    screen.value = eval(screen.value);
 });
 
 
