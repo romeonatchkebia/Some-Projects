@@ -21,6 +21,8 @@ const dote = document.getElementById("dote");
 const equal = document.getElementById("equal");
 
 
+let num1 = "";
+let operator = "";
 
 
 allClear.addEventListener("click", () => {
@@ -41,9 +43,6 @@ eight.addEventListener("click", () => {
 nine.addEventListener("click", () => {
     screen.value += "9";
 });
-mult.addEventListener("click", () => {
-    screen.value += "*";
-});
 four.addEventListener("click", () => {
     screen.value += "4";
 });
@@ -52,9 +51,6 @@ five.addEventListener("click", () => {
 });
 six.addEventListener("click", () => {
     screen.value += "6";
-});
-minus.addEventListener("click", () => {
-    screen.value += "-";
 });
 one.addEventListener("click", () => {
     screen.value += "1";
@@ -65,21 +61,52 @@ two.addEventListener("click", () => {
 three.addEventListener("click", () => {
     screen.value += "3";
 });
-plus.addEventListener("click", () => {
-    screen.value += "+";
-
-});
 zero.addEventListener("click", () => {
     screen.value += "0";
 });
 dote.addEventListener("click", () => {
     screen.value += ".";
 });
+minus.addEventListener("click", () => {
+    operator = "+";
+    num1 = parseFloat(screen.value);
+    screen.value = "";
+});
+plus.addEventListener("click", () => {
+    operator = "+";
+    num1 = parseFloat(screen.value);
+    screen.value = "";
+});
+mult.addEventListener("click", () => {
+    operator = "+";
+    num1 = parseFloat(screen.value);
+    screen.value = "";
+});
 slash.addEventListener("click", () => {
-    screen.value += "/";
+    operator = "+";
+    num1 = parseFloat(screen.value);
+    screen.value = "";
 });
 equal.addEventListener("click", () => {
-    screen.value = eval(screen.value);
+    let num2 = parseFloat(screen.value);
+    let result = "";
+    
+    switch (operator){
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            result = num1 / num2;
+            break;
+        default: 0;
+    }
+    screen.value = result;
 });
 
 
