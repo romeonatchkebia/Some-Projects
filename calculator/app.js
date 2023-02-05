@@ -23,7 +23,6 @@ const equal = document.getElementById("equal");
 
 
 
-
 allClear.addEventListener("click", () => {
     screen.value = "";
 });
