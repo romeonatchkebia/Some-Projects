@@ -15,14 +15,14 @@ let operator = "";
 
 numbers.forEach(button => {
     button.addEventListener("click", () => {
-        screen.value = button.innerText;
-        num1 = parseFloat(screen.value);
+        screen.value += button.innerText;
     });
 });
 operators.forEach(button => {
     button.addEventListener("click", () => {
-        screen.value = button.innerText;
-        operator = parseFloat(screen.value);
+        num1 = parseFloat(screen.value); 
+        operator = button.innerText;
+        screen.value = "";
     });
 });
 clear.addEventListener("click", () => {
@@ -35,7 +35,8 @@ clearAll.addEventListener("click", () => {
 })
 
 equal.addEventListener("click", () => {
-    let result = "";
+    let num2 = parseFloat(screen.value);
+    let result;
 
     switch (operator) {
         case "+":
@@ -50,8 +51,9 @@ equal.addEventListener("click", () => {
         case "*":
             result = num1 * num2;  
             break;
-        default: 0;          
-    }
-    result = screen.value;
+        default: 
+            result = 0;          
+    };
+    screen.value = result;
 }); 
 
