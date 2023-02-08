@@ -13,12 +13,12 @@ let num1 = "";
 let operator = "";
 
 
-numbers.forEach(button => {
+numbers.forEach((button) => {
     button.addEventListener("click", () => {
         screen.value += button.innerText;
     });
 });
-operators.forEach(button => {
+operators.forEach((button) => {
     button.addEventListener("click", () => {
         num1 = parseFloat(screen.value); 
         operator = button.innerText;
@@ -27,11 +27,9 @@ operators.forEach(button => {
 });
 clear.addEventListener("click", () => {
     screen.value = screen.value.slice(0, -1);
-    screenTwo.value = screenTwo.value.slice(0, -1);
 })
 clearAll.addEventListener("click", () => {
     screen.value = "";
-    screenTwo.value = "";
 })
 
 equal.addEventListener("click", () => {
