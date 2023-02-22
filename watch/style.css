@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+#container {
+    display: flex;
+    background-color: rgb(100, 207, 207);
+    height: 30rem;
+    width: 30rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
